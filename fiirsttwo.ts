@@ -10,7 +10,7 @@ rl.question('Enter a string: ', (inputString) => {
     const firstTwoCharacters = inputString.slice(0, 2);
     console.log(`First two characters: ${firstTwoCharacters}`);
   } else {
-    console.log('Input string is too short. It must have at least 2 characters.');
+    console.log('Input string is too short. It must have at least 2 characters. plese try again');
   }
 
   rl.close();
