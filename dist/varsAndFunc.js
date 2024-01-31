@@ -2,12 +2,20 @@ var xddd = 56;
 var obj;
 var str;
 xddd = 5;
-function primitiveToObj(p_number, p_string, pboolean) {
+var names;
+(function (names) {
+    names["Eran"] = "eran krs";
+    names["Ori"] = "oriki";
+})(names || (names = {}));
+function primitiveToObj(p_number, p_string, panswer) {
     //let retObj = new Object();9
-    var retObj = { num: 4, str: p_string, bool: pboolean, bb: "gfgfg" };
+    var retObj = { ages: p_number, Names: p_string, answer: panswer, bb: "gfgfg" };
     return retObj;
 }
-var retVal = primitiveToObj(4, "Amnon Titinski", false);
-var ret_str = retVal.str;
-console.log("obj string: ".concat(retVal.str));
-console.log("Object values: ".concat(retVal.bool));
+var retVal = primitiveToObj(43, names.Ori, true);
+retVal.Names = names.Eran;
+//let ret_str:string = retVal.str;
+console.log("obj string: ".concat(retVal.Names));
+console.log("Object values: ".concat(retVal.answer));
+console.log("obj string: ".concat(retVal.Names));
+console.log("Age: ".concat(retVal.ages));
