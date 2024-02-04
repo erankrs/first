@@ -5,6 +5,11 @@ const ticket_1:JiraTicket = new JiraTicket(
     "Fix critical bug",
     "This is a critical bug that needs immediate attention.",
     "John Doe",
-    "Open"
+    "Open",
+    {
+        filename: "task",
+        size: 44,
+        mimeType: "pdf"
+    }
   );
-console.log("Hello, World!  "+ticket_1.description);
+console.log("Hello, World!  "+ticket_1.attachement);

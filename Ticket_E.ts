@@ -1,11 +1,15 @@
 import * as readline from 'readline';
+import ticketStatus from "./ticketStructs"
+import JiraAttachment from "./ticketStructs"
+
 class JiraTicket {
-    private _ticketKey: string;
+    private  _ticketKey: string;
     private _summary: string;
     private _description: string;
     private _assignee: string;
-    private _status: string;
+    private _status: ticketStatus;
     private _storypoints:number
+    private _attachement:JiraAttachment
   
 
     
@@ -15,13 +19,17 @@ class JiraTicket {
       summary: string,
       description: string,
       assignee: string,
-      status: string
+      status: string,
+      attachemen:JiraAttachment
     ) {
       this._ticketKey = ticketKey;
+      let additional:String;
+      additional = "  additional text added to the description "
       this._summary = summary;
-      this._description = description;
+      this._description = description+additional;
       this._assignee = assignee;
       this._status = status;
+      this._attachement = attachemen
     }
   
     // Getter methods
@@ -41,9 +49,13 @@ class JiraTicket {
       return this._assignee;
     }
   
-    get status(): string {
+    get status(): ticketStatus {
       return this._status;
     }
+
+    get attachement(): JiraAttachment {
+        return this._attachement;
+      }
   
     // Setter methods
     set summary(summary: string) {
@@ -58,12 +70,23 @@ class JiraTicket {
       this._assignee = assignee;
     }
   
-    set status(status: string) {
+    set status(status: ticketStatus) {
       this._status = status;
     }
   }
 
   export default JiraTicket;
+
+  let tst:ticketStatus = {
+    status:"In Progress",
+    status_desc:"open and ready to be assigned"
+};
+
+let ach:JiraAttachment = {
+    filename: "screenshot",
+    size: 34,
+    mimeType: 'jpeg'
+}
   
   // Creating an instance of JiraTicket
   function main():void{
@@ -72,7 +95,8 @@ class JiraTicket {
         "Fix critical bug",
         "This is a critical bug that needs immediate attention.",
         "John Doe",
-        "Open"
+        tst,
+        ach
       );
       
       // Accessing properties using getter methods
@@ -81,6 +105,7 @@ class JiraTicket {
       console.log("Description:", myJiraTicket.description);
       console.log("Assignee:", myJiraTicket.assignee);
       console.log("Status:", myJiraTicket.status);
+      console.log("attechement detaols",myJiraTicket.attachement['filename'])
       
       // Modifying properties using setter methods
       myJiraTicket.summary = "Update documentation";
@@ -91,7 +116,7 @@ class JiraTicket {
       console.log("NOT CLEAR WHY CIDE OUT OF THE CONSTRUCTOR IS RUNNING !!!!")
   }
   
-  main();
+ // main();
   
  
  

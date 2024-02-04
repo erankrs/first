@@ -11,7 +11,8 @@ type answer = true|false
 
 enum names{
     Eran = "eran krs",
-    Ori = "oriki"
+    Ori = "oriki",
+    testerror = 6
 }
 
 interface struct {
@@ -20,14 +21,18 @@ interface struct {
     answer:boolean
 }
    
-function primitiveToObj(p_number:struct['ages'],p_string:names,panswer:answer):struct{
+function primitiveToObj(
+    p_age:struct['ages'],
+    p_names:names,
+    panswer:answer):struct
+    {
     //let retObj = new Object();9
-    let retObj = {ages:p_number,Names:p_string,answer:panswer,bb:"gfgfg"}
+    let retObj = {ages:p_age,Names:p_names,answer:panswer,bb:"gfgfg"}
     return retObj
 
 }
 
-const retVal = primitiveToObj(43,names.Ori,true)
+const retVal = primitiveToObj(43,names.testerror,true)
 retVal.Names = names.Eran;
 //let ret_str:string = retVal.str;
 
