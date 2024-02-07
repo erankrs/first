@@ -11,7 +11,7 @@ rl.question('Enter a string: ', function (inputString) {
         console.log("First two characters: ".concat(firstTwoCharacters));
     }
     else {
-        console.log('Input string is too short. It must have at least 2 characters.');
+        console.log('Input string is too short. It must have at least 2 characters. plese try again');
     }
     rl.close();
 });

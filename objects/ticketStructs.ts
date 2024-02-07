@@ -24,7 +24,6 @@ interface JiraComment {
     timestamp: Date;
   }
   
- // export default TicketStatus
 
   // Define an interface for Jira Ticket Attachment
   interface JiraAttachment {
@@ -33,6 +32,4 @@ interface JiraComment {
     mimeType: string;
   }
 
-
-
-//export  default JiraAttachment
+  export { teamMember, TicketStatus, JiraComment, JiraAttachment };

@@ -71,7 +71,7 @@ var JiraTicket = /** @class */ (function () {
 }());
 exports.default = JiraTicket;
 var tst = {
-    status: "In Progress",
+    ticket_status: "In-Progress",
     status_desc: "open and ready to be assigned"
 };
 var ach = {
