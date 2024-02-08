@@ -1,4 +1,4 @@
-import JiraTicket from "../Ticket_E"
+import JiraTicket from "../TechNova/Ticket_E"
 
 const ticket_1:JiraTicket = new JiraTicket(
     "PROJ-123",
