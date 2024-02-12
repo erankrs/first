@@ -14,8 +14,8 @@ class Team{
             // Create a new teamMember instance and add it to the members array
             this.members.push(new teamMember());
         }
-        this.members[0] = new teamMember(6, "moll", Seniority.Senior);
-        this.members[1] = new teamMember (65, "mollttt", Seniority.JUNIOR)
+        this.members[0] = new teamMember(6, "moll","Mid");
+        this.members[1] = new teamMember (65, "mollttt", "Junior")
     }
 
    

@@ -1,23 +1,26 @@
 
 
-enum Seniority{
+export enum Seniority {
     Senior = "senior",
     MID = "mid-level",
     JUNIOR = "junior"
-
 }
 
-export class teamMember{
+type member_level = "Senior"|"Mid"|"Junior"|"Leader";
+
+export class teamMember {
     private _id: number;
     private _name: string;
-    private _level: Seniority;
+    private _level: member_level
 
-    
-    constructor(id: number, name: string, level: Seniority) {
+    // Constructor with parameters
+    constructor(id?: number, name?: string, level?:member_level) {
         this._id = id;
         this._name = name;
         this._level = level;
     }
+
+   
 
     // Getter for id
     get id(): number {
@@ -40,12 +43,12 @@ export class teamMember{
     }
 
     // Getter for level
-    get level(): Seniority {
+    get level():member_level {
         return this._level;
     }
 
     // Setter for level
-    set level(level: Seniority) {
+    set level(level:member_level) {
         this._level = level;
     }
 }

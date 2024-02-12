@@ -1,13 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.teamMember = void 0;
+exports.teamMember = exports.Seniority = void 0;
 var Seniority;
 (function (Seniority) {
     Seniority["Senior"] = "senior";
     Seniority["MID"] = "mid-level";
     Seniority["JUNIOR"] = "junior";
-})(Seniority || (Seniority = {}));
+})(Seniority || (exports.Seniority = Seniority = {}));
 var teamMember = /** @class */ (function () {
+    // Constructor with parameters
     function teamMember(id, name, level) {
         this._id = id;
         this._name = name;

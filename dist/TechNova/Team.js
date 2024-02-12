@@ -9,8 +9,8 @@ var Team = /** @class */ (function () {
             // Create a new teamMember instance and add it to the members array
             this.members.push(new TeamMember_1.teamMember());
         }
-        this.members[0] = new TeamMember_1.teamMember(6, "moll", TeamMember_1.Seniority.Senior);
-        this.members[1] = new TeamMember_1.teamMember(65, "mollttt", TeamMember_1.Seniority.JUNIOR);
+        this.members[0] = new TeamMember_1.teamMember(6, "moll", "Mid");
+        this.members[1] = new TeamMember_1.teamMember(65, "mollttt", "Junior");
     }
     return Team;
 }());
