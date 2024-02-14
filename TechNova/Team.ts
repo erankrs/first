@@ -3,7 +3,14 @@ import {teamMember,Seniority} from "./entities/TeamMember";
 
 class Team{
     private team_id:number;
-    private members: teamMember[];
+    private _members: teamMember[];
+
+    public get members(): teamMember[] {
+        return this._members;
+    }
+    public set members(value: teamMember[]) {
+        this._members = value;
+    }
     
     
     constructor() {
@@ -18,10 +25,13 @@ class Team{
         this.members[1] = new teamMember (65, "mollttt", "Junior")
     }
 
-   
+
+
 }
 
 function main():void {
+    console.log("ddsddssdd %%%%%%########");
     let team:Team = new Team();
-    console.log("ddsddssdd "+team);    
+    console.log("ddsddssdd "+team.members[0].name);    
 }
+main();

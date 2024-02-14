@@ -12,9 +12,21 @@ var Team = /** @class */ (function () {
         this.members[0] = new TeamMember_1.teamMember(6, "moll", "Mid");
         this.members[1] = new TeamMember_1.teamMember(65, "mollttt", "Junior");
     }
+    Object.defineProperty(Team.prototype, "members", {
+        get: function () {
+            return this._members;
+        },
+        set: function (value) {
+            this._members = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
     return Team;
 }());
 function main() {
+    console.log("ddsddssdd %%%%%%########");
     var team = new Team();
-    console.log("ddsddssdd " + team);
+    console.log("ddsddssdd " + team.members[0].name);
 }
+main();
