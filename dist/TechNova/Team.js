@@ -10,7 +10,7 @@ var Team = /** @class */ (function () {
             this.members.push(new TeamMember_1.teamMember());
         }
         this.members[0] = new TeamMember_1.teamMember(6, "moll", "Mid");
-        this.members[1] = new TeamMember_1.teamMember(65, "mollttt", "Junior");
+        this.members[5] = new TeamMember_1.teamMember(65, "mollttt", "Junior");
     }
     Object.defineProperty(Team.prototype, "members", {
         get: function () {
@@ -27,6 +27,6 @@ var Team = /** @class */ (function () {
 function main() {
     console.log("ddsddssdd %%%%%%########");
     var team = new Team();
-    console.log("ddsddssdd " + team.members[0].name);
+    console.log("ddsddssdd " + team.members[699]);
 }
 main();

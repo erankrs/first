@@ -1,7 +1,7 @@
 {
   "name": "first-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "first repository",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +14,9 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "q"
   }
 }

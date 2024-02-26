@@ -22,7 +22,7 @@ class Team{
             this.members.push(new teamMember());
         }
         this.members[0] = new teamMember(6, "moll","Mid");
-        this.members[1] = new teamMember (65, "mollttt", "Junior")
+        this.members[5] = new teamMember (65, "mollttt", "Junior")
     }
 
 
@@ -32,6 +32,6 @@ class Team{
 function main():void {
     console.log("ddsddssdd %%%%%%########");
     let team:Team = new Team();
-    console.log("ddsddssdd "+team.members[0].name);    
+    console.log("ddsddssdd "+team.members[699]);    
 }
 main();
