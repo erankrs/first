@@ -9,6 +9,7 @@
   "author": "Eran Karisi",
   "license": "ISC",
   "dependencies": {
+    "apify-client": "^2.9.3",
     "axios": "^1.6.7",
     "typescript": "^5.3.3"
   },

@@ -1,7 +1,10 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.fetchSprintData = void 0;
-var axios_1 = require("axios");
+var axios_1 = __importDefault(require("axios"));
 function fetchSprintData() {
     // Define the Jira API endpoint for fetching all sprints data
     var apiUrl = 'https://eran-karisi.atlassian.net/rest/agile/1.0/board/{boardId}/sprint';
