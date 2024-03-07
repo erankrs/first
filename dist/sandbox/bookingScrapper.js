@@ -44,18 +44,20 @@ var client = new apify_client_1.ApifyClient({
 // Prepare Actor input
 var input = {
     "search": "New York",
-    "maxItems": 10,
-    "sortBy": "distance_from_search",
+    "maxItems": 30,
+    //"sortBy": "price",
     "starsCountFilter": "any",
     "currency": "USD",
     "language": "en-gb",
-    "minMaxPrice": "0-999999"
+    "minMaxPrice": "200-500"
 };
 (function () { return __awaiter(void 0, void 0, void 0, function () {
-    var run, items;
+    var fs, run, items, error_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, client.actor("voyager/booking-scraper").call(input)];
+            case 0:
+                fs = require('fs').promises;
+                return [4 /*yield*/, client.actor("voyager/booking-scraper").call(input)];
             case 1:
                 run = _a.sent();
                 // Fetch and print Actor results from the run's dataset (if any)
@@ -66,7 +68,19 @@ var input = {
                 items.forEach(function (item) {
                     console.dir(item);
                 });
-                return [2 /*return*/];
+                _a.label = 3;
+            case 3:
+                _a.trys.push([3, 5, , 6]);
+                return [4 /*yield*/, fs.writeFile('booking-hotels.json', JSON.stringify(items, null, 2))];
+            case 4:
+                _a.sent();
+                console.log('Output written to booking-hotels.json');
+                return [3 /*break*/, 6];
+            case 5:
+                error_1 = _a.sent();
+                console.error('Error writing output to file:', error_1);
+                return [3 /*break*/, 6];
+            case 6: return [2 /*return*/];
         }
     });
 }); })();
